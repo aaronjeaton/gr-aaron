@@ -1,0 +1,16 @@
+<block>
+  <name>Priority streamer ff</name>
+  <key>aaron_priority_streamer_ff</key>
+  <category>AARON</category>
+  <import>import aaron</import>
+  <make>aaron.priority_streamer_ff()</make>
+  <sink>
+    <name>in</name>
+    <type>float</type>
+    <nports>2</nports>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>
