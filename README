@@ -1,0 +1,23 @@
+Priority Streamer Block
+
+This block prioritizes the input stream that is connected to port 0 over the input stream that is connected to port 1.
+When the input 0 stream contains samples with non-zero magnitudes, stream 0 is automatically connected to the output port.  
+When the input 0 stream contains samples that are zero in magnitude, stream 1 is connected to the output port.
+
+Example Usage: when monitoring a frequency with both analog and digital voice, you can connect the analog FM demodulated audio
+to input port 1 and connect the decoded digital audio to port 0.  This allows you to hear analog audio by default, but 
+automatically switch to digital audio when it is present on input port 0.
+
+The block is avaiable in gnuradio companion.  Complied under gnuradio version 3.6.5.1.
+
+
+Installation:
+
+git clone https://github.com/aaronjeaton/gnuradio-blocks.git
+cd gr-aaron
+mkdir build
+cmake ../
+make
+make test
+sudo make install
+sudo ldconfig (for ubuntu users)
